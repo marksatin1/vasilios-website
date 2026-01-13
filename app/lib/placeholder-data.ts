@@ -1,7 +1,7 @@
 import { ImageType } from "./definitions";
 import treeFrog from '@/public/tree-frog.webp';
 
-export const placeholderImages: ImageType[] = [
+export const placeholderHomepageImages: ImageType[] = [
   {
     id: 1,
     url: "/tree-frog.webp",
@@ -28,4 +28,33 @@ export const placeholderImages: ImageType[] = [
     height: 1386,
     description: "Tree frog"
   },
-]
+];
+
+export const placeholderCommercialsImages: ImageType[] = [
+  {
+    id: 1,
+    url: "/emu.webp",
+    width: 1600,
+    height: 1067,
+    description: "Emu"
+  },
+  {
+    id: 2,
+    url: "/emu-1.jpg",
+    width: 2000,
+    height: 1157,
+    description: "Emu"
+  }, {
+    id: 3,
+    url: "/emu-2.jpg",
+    width: 1600,
+    height: 900,
+    description: "Emu"
+  }, {
+    id: 4,
+    url: "/emu-3.jpg",
+    width: 1365,
+    height: 1024,
+    description: "Emu"
+  },
+];
