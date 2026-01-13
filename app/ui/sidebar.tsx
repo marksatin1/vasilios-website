@@ -9,7 +9,7 @@ export default function Sidebar() {
           <Link
             key={navLink.name}
             href={navLink.href}
-            className={`${navLink.name === "Contact" ? 'italic' : 'not-italic'}`}
+            className={`hover:text-gray-500 ${navLink.name === "Contact" ? 'italic' : 'not-italic hover:scale-110 ease-in-out duration-300'}`}
           >
             {navLink.name}
           </Link>

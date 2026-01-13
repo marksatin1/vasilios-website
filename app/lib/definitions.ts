@@ -4,4 +4,5 @@ export type ImageType = {
   width: number;
   height: number;
   description: string;
+  href: string;
 };

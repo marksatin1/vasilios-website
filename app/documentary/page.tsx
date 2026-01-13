@@ -1,3 +1,6 @@
+import { placeholderDocumentaryImages } from "../lib/placeholder-data";
+import PageMenu from "../ui/page-menu";
+
 export default function Documentary() {
-  return <div></div>;
+  return <PageMenu menuImages={placeholderDocumentaryImages} />;
 };
