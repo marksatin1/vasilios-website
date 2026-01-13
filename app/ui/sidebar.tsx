@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Sidebar() {
   return (
-    <nav className="text-xl flex flex-col gap-y-2 font-bold text-right">
+    <nav className="text-xl flex flex-col gap-y-2 font-bold">
       {navLinks.map((navLink) => {
         return (
           <Link
