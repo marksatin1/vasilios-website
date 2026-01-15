@@ -80,7 +80,7 @@ export const placeholderFeaturesImages: ImageType[] = [
     width: 3072,
     height: 2048,
     description: "Serval 1",
-    href: "/features-&-TV/serval-1"
+    href: "/features-&-tv/serval-1"
   },
   {
     id: 2,
@@ -88,14 +88,14 @@ export const placeholderFeaturesImages: ImageType[] = [
     width: 1400,
     height: 790,
     description: "Serval 2",
-    href: "/features-&-TV/serval-2"
+    href: "/features-&-tv/serval-2"
   }, {
     id: 3,
     url: "/serval-2.webp",
     width: 2000,
     height: 1332,
     description: "Serval 3",
-    href: "/features-&-TV/serval-3"
+    href: "/features-&-tv/serval-3"
   }
 ];
 

@@ -30,7 +30,6 @@ export default function AutoCarousel({ images, fadeInterval, variants }: { image
           duration: fadeInterval / 1000
         }}
         variants={variants}
-        className="absolute inset-0 z-0 pointer-events-none"
       >
         <Image
           src={currentImage.url}

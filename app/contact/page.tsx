@@ -1,6 +1,6 @@
 export default function Contact() {
   return (
-    <div className="h-full flex align-middle justify-center">
+    <div className="border border-white rounded-lg h-full flex align-middle justify-center items-center">
       <div className="flex flex-col justify-center gap-16 text-gray-500 text-center text-lg">
         <div>
           <h2 className="font-bold text-white">CONTACT</h2>
