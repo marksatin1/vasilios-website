@@ -26,7 +26,7 @@ export default function MenuItem({ menuImage, containerRef }: { menuImage: Image
       <div ref={itemRef} className="relative pb-4 md:pb-8">
         <motion.div
           style={{ scale }}
-          className="relative h-64"
+          className="relative h-64 w-full"
         >
           <Image
             src={menuImage.url}

@@ -22,3 +22,9 @@ export type VideoType = {
   width: number;
   year: number;
 };
+
+export type NavLinkType = {
+  name: string;
+  href: string;
+  videos?: string[];
+};
