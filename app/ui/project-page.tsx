@@ -1,11 +1,34 @@
-export default function ProjectPage({ title }: { title: string }) {
+import { getVideoByTitle } from "../lib/actions"
+import { VideoType } from "../lib/definitions"
+
+export default async function ProjectPage({ videoTitle }: { videoTitle: string }) {
+  const projectVideo: VideoType | undefined = await getVideoByTitle(videoTitle);
+
+  const {
+    description,
+    director,
+    genre_id,
+    height,
+    hero_image_url,
+    id,
+    producer,
+    title,
+    video_url,
+    width,
+    year
+  } = projectVideo!;
+
   return (
     <div className="flex flex-col gap-16 h-full justify-center">
-      <video width="1280" height="720" controls className="w-full"></video>
+      <video width={width} height={height} controls className="w-full">
+        <source src={video_url} />
+        Your browser does not support the HTML 5 video tag.
+      </video>
       <div className="text-white text-xl md:text-2xl text-center">
-        <p>Title</p>
-        <p>Director</p>
-        <p>Producer</p>
+        <p>{title}</p>
+        <p>{director}</p>
+        <p>{producer}</p>
+        <p>{year}</p>
       </div>
     </div>
   )

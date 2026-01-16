@@ -7,12 +7,12 @@ import { useScroll, useTransform, motion } from "motion/react";
 import { useRef } from "react";
 
 export default function MenuItem({ menuImage, containerRef }: { menuImage: ImageType, containerRef: React.RefObject<HTMLDivElement | null> }) {
-  const ref = useRef<HTMLDivElement>(null);
+  const itemRef = useRef<HTMLDivElement>(null);
 
   const { scrollYProgress } = useScroll({
     container: containerRef,
-    target: ref,
-    offset: ["start end", "center center"],
+    target: itemRef,
+    offset: ["start end", "end start"],
   });
 
   // 1st array: entrance, midpoint, exit
@@ -21,18 +21,21 @@ export default function MenuItem({ menuImage, containerRef }: { menuImage: Image
 
   return (
     <Link
-      href={menuImage.href}
+      href={menuImage.href + "/" + menuImage.video_title}
     >
-      <div className="relative pb-4 md:pb-8">
+      <div ref={itemRef} className="relative pb-4 md:pb-8">
         <motion.div
-          ref={ref}
           style={{ scale }}
+          className="relative h-64"
         >
           <Image
             src={menuImage.url}
             alt={menuImage.description}
-            width={menuImage.width}
-            height={menuImage.height}
+            // width={menuImage.width}
+            // height={menuImage.height}
+            fill
+            priority
+            className="object-cover"
           />
         </motion.div>
         <h3 className="absolute bottom-8 md:bottom-16 text-xl md:text-3xl text-white text-center text-shadow-lg z-10 w-full font-bold pointer-events-none">{menuImage.description}</h3>
