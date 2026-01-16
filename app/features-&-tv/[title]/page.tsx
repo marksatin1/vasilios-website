@@ -4,5 +4,5 @@ export default async function FeaturesAndTVPage({ params }: { params: { title: s
   const { title } = await params;
   console.log(title);
 
-  return <ProjectPage title={title} />;
+  return <ProjectPage videoTitle={title} />;
 }
