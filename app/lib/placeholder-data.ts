@@ -1,44 +1,54 @@
-// import { ImageType } from "./definitions";
+import { ImageType } from "./definitions";
 
-// export const placeholderHomepageImages: ImageType[] = [
-//   {
-//     id: 1,
-//     url: "/tree-frog.webp",
-//     width: 554,
-//     height: 554,
-//     description: "Tree frog 1",
-//     href: "#"
-//   },
-//   {
-//     id: 2,
-//     url: "/tree-frog-1.jpg",
-//     width: 1600,
-//     height: 1131,
-//     description: "Tree frog 2",
-//     href: "#"
-//   }, {
-//     id: 3,
-//     url: "/tree-frog-2.jpg",
-//     width: 1200,
-//     height: 675,
-//     description: "Tree frog 3",
-//     href: "#"
-//   }, {
-//     id: 4,
-//     url: "/tree-frog-3.jpg",
-//     width: 2560,
-//     height: 1386,
-//     description: "Tree frog 4",
-//     href: "#"
-//   }, {
-//     id: 5,
-//     url: "/tree-frog-4.jpg",
-//     width: 1480,
-//     height: 833,
-//     description: "Tree frog 5",
-//     href: "#"
-//   },
-// ];
+export const placeholderHomepageImages: ImageType[] = [
+  {
+    id: 1,
+    url: "/tree-frog.webp",
+    width: 554,
+    height: 554,
+    description: "Tree frog 1",
+    href: "#",
+    title: "",
+    video_title: "",
+  },
+  {
+    id: 2,
+    url: "/tree-frog-1.jpg",
+    width: 1600,
+    height: 1131,
+    description: "Tree frog 2",
+    href: "#",
+    title: "",
+    video_title: "",
+  }, {
+    id: 3,
+    url: "/tree-frog-2.jpg",
+    width: 1200,
+    height: 675,
+    description: "Tree frog 3",
+    href: "#",
+    title: "",
+    video_title: "",
+  }, {
+    id: 4,
+    url: "/tree-frog-3.jpg",
+    width: 2560,
+    height: 1386,
+    description: "Tree frog 4",
+    href: "#",
+    title: "",
+    video_title: "",
+  }, {
+    id: 5,
+    url: "/tree-frog-4.jpg",
+    width: 1480,
+    height: 833,
+    description: "Tree frog 5",
+    href: "#",
+    title: "",
+    video_title: "",
+  },
+];
 
 // export const placeholderCommercialsImages: ImageType[] = [
 //   {
