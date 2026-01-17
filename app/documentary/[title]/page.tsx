@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: { title: string } }
   }
 }
 
-export default async function DocumentaryPage({ params }: { params: { title: string } }) {
+export default async function DocumentaryItem({ params }: { params: { title: string } }) {
   const { title } = await params;
 
   return <ProjectPage videoTitle={title} />;

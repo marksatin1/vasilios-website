@@ -4,7 +4,7 @@ import { ImageType } from "../lib/definitions";
 import { getImagesByGenre } from "../lib/actions";
 
 export const metadata: Metadata = {
-  title: "Features & TV",
+  title: "Features & TV | Vasilios Cinematography",
   description: "The feature and television work of cinematographer Vasilios Sfinarolakis.",
 };
 

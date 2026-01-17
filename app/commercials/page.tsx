@@ -4,7 +4,7 @@ import { ImageType } from "../lib/definitions";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Commercials",
+  title: "Commercials | Vasilios Cinematography",
   description: "The commercial work of cinematographer Vasilios Sfinarolakis.",
 };
 
