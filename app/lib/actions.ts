@@ -100,8 +100,6 @@ export async function getVideosByGenre(genre: string): Promise<VideoType[] | und
 export async function getVideoByTitle(videoTitle: string): Promise<VideoType | undefined> {
   const { data, error } = await supabase.from("videos").select("*").eq("title", "test-video-1"); 
 
-  console.log(data![0]);
-
   if (error) {
     console.error("Supabase Error retrieving your video with title " + videoTitle + ": " + error.message);
   }

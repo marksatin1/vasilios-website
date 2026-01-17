@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Documentary",
+  description: "The documentary work of cinematographer Vasilios Sfinarolakis.",
+};
+
 import { getImagesByGenre } from "../lib/actions";
 import PageMenu from "../ui/page-menu";
 import { ImageType } from "../lib/definitions";

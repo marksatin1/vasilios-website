@@ -10,7 +10,7 @@ export default function NavbarMenu({ navLinks }: { navLinks: NavLinkType[] }) {
 
   return (
     <nav>
-      <ul className="text-lg flex flex-col gap-y-2">
+      <ul className="text-2xl flex flex-col gap-y-2">
         {navLinks.map((navLink, index) => {
           const isOpen = openIndex === index;
 
@@ -37,10 +37,20 @@ export default function NavbarMenu({ navLinks }: { navLinks: NavLinkType[] }) {
                       ease: [0.4, 0, 0.2, 1]
                     }}
                   >
-                    <ul className="pl-4 mt-2 text-sm text-gray-400">
+                    <ul className="text-gray-400 text-left justify-self-end">
                       {navLink.videos?.map((video, index) => (
-                        <li key={video + "-" + index}>
-                          <Link href={navLink.href+ "/" + video}>{video}</Link>
+                        <li key={video + "-" + index} className="hover:text-white">
+                          <Link href={navLink.href + "/" + video} className="
+                            relative inline-block
+                            bg-[linear-gradient(currentColor,currentColor)]
+                            bg-size-[0%_5px]
+                            bg-position-[0_100%]
+                            bg-no-repeat
+                            transition-[background-size] duration-500 ease-out
+                            hover:bg-size-[100%_2px]
+                            ">
+                            {video}
+                          </Link>
                         </li>
                       ))}
                     </ul>

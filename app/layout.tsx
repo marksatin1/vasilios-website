@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, League_Spartan } from "next/font/google";
 import "./globals.css";
 import NavbarMobile from "./ui/navbar-mobile";
 import NavbarDesktop from "./ui/navbar-desktop";
@@ -14,9 +14,17 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const leagueSpartan = League_Spartan({
+  subsets: ["latin"],
+  variable: "--font-league-spartan",
+});
+
 export const metadata: Metadata = {
-  title: "Vasilios Sfinarolakis Cinematography",
-  description: "The Cinematography Portfolio of Vasilios Sfinarolakis",
+  title: {
+    template: "%s | Vasilios Cinematography",
+    default: "Vasilios Sfinarolakis Cinematography",
+  },
+  description: "The official cinematography portfolio of Vasilios Sfinarolakis.",
 };
 
 export default function RootLayout({
@@ -27,7 +35,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${leagueSpartan.className} antialiased`}
       >
         <div className="flex flex-col md:flex-row bg-black w-dvw h-dvh overflow-auto p-4 md:p-0">
           <div className="md:hidden">

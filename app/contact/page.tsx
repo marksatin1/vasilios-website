@@ -1,3 +1,10 @@
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact",
+  description: "The contact page for cinematographer Vasilios Sfinarolakis.",
+};
+
 export default function Contact() {
   return (
     <div className="border border-white rounded-lg h-full flex align-middle justify-center items-center">
