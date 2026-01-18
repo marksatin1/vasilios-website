@@ -38,7 +38,7 @@ export default function MenuItem({ menuImage, containerRef }: { menuImage: Image
             className="object-cover"
           />
         </motion.div>
-        <h3 className="absolute bottom-8 md:bottom-16 text-xl md:text-3xl text-white text-center text-shadow-lg z-10 w-full font-bold pointer-events-none">{menuImage.description}</h3>
+        <h3 className="absolute bottom-8 md:bottom-12 text-xl md:text-3xl text-white text-center text-shadow-lg z-10 w-full font-bold pointer-events-none">{menuImage.video_title}</h3>
       </div>
     </Link>
   );

@@ -1,7 +1,7 @@
 'use server';
 
 import { supabase } from "./supabase";
-import { ImageType, VideoType } from "./definitions";
+import { ImageType, NavLinkType, VideoType } from "./definitions";
 
 function convertGenreToId(genre: string): number {
   switch (genre) {
@@ -97,8 +97,19 @@ export async function getVideosByGenre(genre: string): Promise<VideoType[] | und
   }
 }
 
+export async function getNavLinks(): Promise<NavLinkType[] | undefined> {
+  const { data, error } = await supabase.from("genres").select("*, videos:videos(id, title)");
+
+  if (error) {
+    console.error("Supabase Error getting nav links: " + error.message);
+    return [];
+  };
+
+  if (data) return data;
+}
+
 export async function getVideoByTitle(videoTitle: string): Promise<VideoType | undefined> {
-  const { data, error } = await supabase.from("videos").select("*").eq("title", "test-video-1"); 
+  const { data, error } = await supabase.from("videos").select("*").eq("title", "test-video-1");
 
   if (error) {
     console.error("Supabase Error retrieving your video with title " + videoTitle + ": " + error.message);

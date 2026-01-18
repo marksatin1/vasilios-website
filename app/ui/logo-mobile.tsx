@@ -5,10 +5,10 @@ export default function LogoMobile({ onClose }: { onClose: () => void }) {
     <Link
       href={'/'}
       onClick={onClose}
-      className="md:text-5xl text-white font-bold z-50 hover:text-gray-500"
+      className="text-2xl text-white font-bold z-50 hover:text-gray-500"
+      aria-label="Go to homepage"
     >
       <p>VASILIOS SFINAROLAKIS</p>
-      {/* <p>Vasilios Sfinarolakis</p> */}
     </Link>
   )
 }

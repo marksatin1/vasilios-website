@@ -5,7 +5,7 @@ import { AnimatePresence, motion, Variants } from 'motion/react';
 import { useState, useEffect } from "react";
 import { ImageType } from "../lib/definitions";
 
-export default function AutoCarousel({ images, fadeInterval, variants }: { images: ImageType[]; fadeInterval: number, variants: Variants }) {
+export default function AutoCarousel({ images, fadeInterval }: { images: ImageType[]; fadeInterval: number }) {
   const [currentPage, setCurrentPage] = useState<number>(0);
 
   useEffect(() => {
@@ -22,14 +22,13 @@ export default function AutoCarousel({ images, fadeInterval, variants }: { image
     <AnimatePresence mode="wait">
       <motion.div
         key={currentImage.id}
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
         transition={{
           ease: "easeInOut",
           duration: fadeInterval / 1000
         }}
-        variants={variants}
         className="fixed left-0 top-0 w-full h-full"
       >
         <Image

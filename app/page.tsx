@@ -1,5 +1,4 @@
 import AutoCarousel from "./ui/auto-carousel";
-import { dissolveVariants } from "./lib/motion-variants";
 import { placeholderHomepageImages } from "./lib/placeholder-data";
 import { Metadata } from "next";
 
@@ -9,7 +8,5 @@ export const metadata: Metadata = {
 }
 
 export default function Home() {
-  return (
-    <AutoCarousel images={placeholderHomepageImages} fadeInterval={5000} variants={dissolveVariants} />
-  );
+  return <AutoCarousel images={placeholderHomepageImages} fadeInterval={5000}/>;
 }

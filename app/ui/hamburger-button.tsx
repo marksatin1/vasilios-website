@@ -8,8 +8,10 @@ export default function HamburgerButton({
   return (
     <button
       onClick={onToggle}
-      className="relative z-50 h-8 w-8 md:hidden"
-      aria-label="Toggle menu"
+      className="relative z-50 h-8 w-8 self-center md:hidden"
+      aria-label={open ? "Close menu" : "Open menu"}
+      aria-expanded={open}
+      aria-controls="mobile-menu"
     >
       <span
         className={`absolute block h-0.5 w-8 bg-white transform transition duration-300 ease-in-out ${open ? "rotate-45 top-3.5" : "top-2"

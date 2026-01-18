@@ -26,5 +26,8 @@ export type VideoType = {
 export type NavLinkType = {
   name: string;
   href: string;
-  videos?: string[];
+  videos?: {
+    id: number;
+    title: string;
+  }[];
 };

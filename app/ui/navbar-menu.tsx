@@ -9,13 +9,13 @@ export default function NavbarMenu({ navLinks }: { navLinks: NavLinkType[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <nav>
+    <nav aria-label="Primary navigation">
       <ul className="text-2xl flex flex-col gap-y-2">
         {navLinks.map((navLink, index) => {
           const isOpen = openIndex === index;
 
           return (
-            <li key={navLink.name}>
+            <li key={navLink.name + "-" + index} className="flex flex-col items-end">
               <Link
                 href={navLink.href}
                 onClick={() =>
@@ -37,10 +37,10 @@ export default function NavbarMenu({ navLinks }: { navLinks: NavLinkType[] }) {
                       ease: [0.4, 0, 0.2, 1]
                     }}
                   >
-                    <ul className="text-gray-400 text-left justify-self-end">
+                    <ul className="w-fit text-gray-400 text-left">
                       {navLink.videos?.map((video, index) => (
-                        <li key={video + "-" + index} className="hover:text-white">
-                          <Link href={navLink.href + "/" + video} className="
+                        <li key={video.title + "-" + index} className="hover:text-white">
+                          <Link href={navLink.href + "/" + video.title.toLowerCase()} className="
                             relative inline-block
                             bg-[linear-gradient(currentColor,currentColor)]
                             bg-size-[0%_5px]
@@ -49,7 +49,7 @@ export default function NavbarMenu({ navLinks }: { navLinks: NavLinkType[] }) {
                             transition-[background-size] duration-500 ease-out
                             hover:bg-size-[100%_2px]
                             ">
-                            {video}
+                            {video.title}
                           </Link>
                         </li>
                       ))}
