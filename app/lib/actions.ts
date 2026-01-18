@@ -98,7 +98,7 @@ export async function getVideosByGenre(genre: string): Promise<VideoType[] | und
 }
 
 export async function getNavLinks(): Promise<NavLinkType[] | undefined> {
-  const { data, error } = await supabase.from("genres").select("*, videos:videos(id, title)");
+  const { data, error } = await supabase.from("genres").select("*, videos:videos(id, title)").order("order", { ascending: true });
 
   if (error) {
     console.error("Supabase Error getting nav links: " + error.message);
