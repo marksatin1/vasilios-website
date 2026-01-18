@@ -31,17 +31,17 @@ export default async function RootLayout({
         className={`${leagueSpartan.className} antialiased`}
       >
         <div className="flex flex-col md:flex-row bg-black w-dvw h-dvh overflow-auto p-4 md:p-0">
-          <div className="md:hidden">
+          <header className="md:hidden">
             <NavbarMobile navLinks={navLinks!} />
-          </div>
+          </header>
 
           <main className="flex-1 overflow-y-scroll h-dvh p-4 md:p-12">
             {children}
           </main>
 
-          <div className="hidden md:flex w-md z-50 pr-8 text-white text-right text-shadow-lg items-center justify-end">
+          <aside className="hidden md:flex w-md z-50 pr-8 text-white text-right text-shadow-lg items-center justify-end">
             <NavbarDesktop navLinks={navLinks!} />
-          </div>
+          </aside>
         </div>
       </body>
     </html>
