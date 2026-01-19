@@ -7,6 +7,7 @@ export type ImageType = {
   href: string;
   title: string;
   video_title: string;
+  genre: string;
 };
 
 export type VideoType = {

@@ -21,7 +21,7 @@ export default function MenuItem({ menuImage, containerRef }: { menuImage: Image
 
   return (
     <Link
-      href={menuImage.href + "/" + menuImage.video_title}
+      href={menuImage.genre + "/" + menuImage.video_title}
     >
       <div ref={itemRef} className="relative pb-4 md:pb-8">
         <motion.div

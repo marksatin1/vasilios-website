@@ -1,7 +1,7 @@
 'use server';
 
-import { supabase } from "./supabase";
 import { ImageType, NavLinkType, VideoType } from "./definitions";
+import { createClient } from "@supabase/supabase-js";
 
 function convertGenreToId(genre: string): number {
   switch (genre) {
@@ -16,6 +16,8 @@ function convertGenreToId(genre: string): number {
       return -1;
   }
 }
+
+const supabase = createClient(process.env.SUPABASE_URL!, process.env.SUPABASE_API_KEY!);
 
 export async function getImagesByGenre(genre: string): Promise<ImageType[] | undefined> {
   const genre_id = convertGenreToId(genre);
@@ -48,7 +50,8 @@ export async function getImagesByGenre(genre: string): Promise<ImageType[] | und
         description,
         href,
         title,
-        video_title
+        video_title,
+        genre
       };
     });
   }
