@@ -40,7 +40,7 @@ export default function NavbarMenu({ navLinks }: { navLinks: NavLinkType[] }) {
                     <ul className="w-fit text-gray-400 text-left text-2xl">
                       {navLink.videos?.map((video, index) => (
                         <li key={video.title + "-" + index} className="hover:text-white">
-                          <Link href={navLink.href + "/" + video.title.toLowerCase()} className="
+                          <Link href={navLink.href + "/" + video.title} className="
                             relative inline-block
                             bg-[linear-gradient(currentColor,currentColor)]
                             bg-size-[0%_5px]

@@ -19,15 +19,15 @@ export default async function ProjectPage({ videoTitle }: { videoTitle: string }
   } = projectVideo!;
 
   return (
-    <div className="flex flex-col gap-16 h-full justify-center">
+    <div className="flex flex-col gap-12 h-full justify-center text-xl md:text-2xl text-white text-center">
       <video width={width} height={height} controls className="w-full">
         <source src={video_url} />
         Your browser does not support the HTML 5 video tag.
       </video>
-      <div className="text-white text-xl md:text-2xl text-center">
-        <p>{title}</p>
-        <p>{director}</p>
-        <p>{producer}</p>
+      <div>
+        <p className="text-3xl">{title}</p>
+        <p>Director: {director}</p>
+        <p>Producer: {producer}</p>
         <p>{year}</p>
       </div>
     </div>
