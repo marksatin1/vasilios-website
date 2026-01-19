@@ -10,6 +10,7 @@ export const placeholderHomepageImages: ImageType[] = [
     href: "#",
     title: "",
     video_title: "",
+    genre: "",
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const placeholderHomepageImages: ImageType[] = [
     href: "#",
     title: "",
     video_title: "",
+    genre: "",
   }, {
     id: 3,
     url: "/tree-frog-2.jpg",
@@ -29,6 +31,7 @@ export const placeholderHomepageImages: ImageType[] = [
     href: "#",
     title: "",
     video_title: "",
+    genre: "",
   }, {
     id: 4,
     url: "/tree-frog-3.jpg",
@@ -38,6 +41,7 @@ export const placeholderHomepageImages: ImageType[] = [
     href: "#",
     title: "",
     video_title: "",
+    genre: "",
   }, {
     id: 5,
     url: "/tree-frog-4.jpg",
@@ -47,5 +51,6 @@ export const placeholderHomepageImages: ImageType[] = [
     href: "#",
     title: "",
     video_title: "",
+    genre: "",
   },
 ];
